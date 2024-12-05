@@ -1,7 +1,7 @@
 import json
 from variants import VARIANT_PRODUCT_ASIN_FILE,SEARCH_QUERY
 
-FILTERED_PRODUCT_ASIN_FILE = f"filtered_{SEARCH_QUERY}_asin.json"
+FILTERED_PRODUCT_ASIN_FILE = f"data/{SEARCH_QUERY}/filtered_{SEARCH_QUERY}_asin.json"
 
 def filter_asins(data, color_filters, size_filters):
 
@@ -22,11 +22,11 @@ def filter_asins(data, color_filters, size_filters):
 
         # If both color and size match, add the ASIN to the filtered list
         if color1_match and size1_match:
-            filtered_asins.append(asin)
+            filtered[asin]=attributes
         elif color2_match and size2_match:
-            filtered_asins.append(asin)
+            filtered[asin]=attributes
         
-    return filtered_asins
+    return filtered
 
 
 color_filters = ["Black", "White", "Gray", "Beige", "Red", "Blue", "Green", "Brown", "Pink", "Purple", "Yellow"]

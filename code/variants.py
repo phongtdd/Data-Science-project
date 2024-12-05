@@ -72,5 +72,6 @@ async def process_asins():
 
 if __name__ == "__main__":
     # Run the asynchronous process
-    asyncio.run(process_asins())
-    print(f"Merged data saved to {VARIANT_PRODUCT_ASIN_FILE}")
+    for i in range(10):
+        asyncio.run(process_asins())
+        print(f"Merged data saved to {VARIANT_PRODUCT_ASIN_FILE}")
