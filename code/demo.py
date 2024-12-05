@@ -6,9 +6,11 @@ from parsel import Selector
 import time
 import aiohttp
 from aiohttp import ClientSession
+from search import SEARCH_QUERY
 
-PRODUCT_INFO_FILE = f"pants_info.json"
-FAIL_TO_LOAD_ASIN_FILE = f"data/fail_pant_asin.json"
+FILTERED_PRODUCT_ASIN_FILE = f"data/{SEARCH_QUERY}/filtered_{SEARCH_QUERY}_asin.json"
+FAIL_TO_LOAD_ASIN_FILE = f"data/{SEARCH_QUERY}/fail_{SEARCH_QUERY}_asin.json"
+PRODUCT_INFO_FILE = f"data/{SEARCH_QUERY}/{SEARCH_QUERY}_info.json"
 
 class ProductInfo(TypedDict):
     """type hint for our scraped product result"""
@@ -30,9 +32,36 @@ class ProductInfo(TypedDict):
 
 USER_AGENTS = [
     # Add your user agents here
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36",
-    # Add more user agents as needed
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 14.4; rv:124.0) Gecko/20100101 Firefox/124.0",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Version/15.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edge/116.0.1938.69",
+    "Mozilla/5.0 (Linux; Android 12; Pixel 6 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Mobile Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Linux; Android 13; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Mobile Safari/537.36 SamsungBrowser/16.0",
+    "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:92.0) Gecko/20100101 Firefox/92.0",
+    "Mozilla/5.0 (Linux; Android 13; SM-A535F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Mobile Safari/537.36 SamsungBrowser/19.0",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.91 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_4_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.15",
+    "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36",
+    "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36",
+    "Mozilla/5.0 (Linux; Android 10; SM-A505FN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Mobile Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36",
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.1 Mobile/15E148 Safari/604.1",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+    "Mozilla/5.0 (Linux; Android 11; SM-G981B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Mobile Safari/537.36",
+    "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Gecko/20100101 Firefox/91.0",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36",
+    "Mozilla/5.0 (Linux; Android 9; SAMSUNG SM-J730F) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/11.1 Chrome/73.0.3683.90 Mobile Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Version/12.1.1 Safari/605.1.15"
 ]
 
 # Global variable for storing ASINs that failed to load
@@ -51,39 +80,65 @@ def extract_keys(obj, parent_key=""):
             keys.extend(extract_keys(item, f"{parent_key}[{index}]"))
     return keys
 
-def parse_product(result, asin) -> ProductInfo:
+def parse_product(result, asin, attribute) -> ProductInfo:
     """parse Amazon's product page (e.g. https://www.amazon.com/dp/B07KR2N2GF) for essential product data"""
+
+    # the other fields can be extracted with simple css selectors
+    # we can define our helper functions to keep our code clean
     sel = Selector(text=result)
 
-    # Extract details from "Product Information" table
+    # extract details from "Product Information" table:
+    info_table = {}
     department = sel.xpath("//*[@id='detailBullets_feature_div']//span/span[contains(normalize-space(text()), 'Department')]/following-sibling::span/text()").get()
-    care = sel.xpath("//*[@id='productFactsDesktopExpander']//span/span[contains(text(), 'Care instructions')]/ancestor::div[1]/following-sibling::div//span/span/text()").get() or "None"
-    fabric = sel.xpath("//*[@id='productFactsDesktopExpander']//span/span[contains(text(), 'Fabric type')]/ancestor::div[1]/following-sibling::div//span/span/text()").get() or "None"
-    origin = sel.xpath("//*[@id='productFactsDesktopExpander']//span/span[contains(text(), 'Origin')]/ancestor::div[1]/following-sibling::div//span/span/text()").get() or "None"
-    closure_types = sel.xpath("//*[@id='productFactsDesktopExpander']//span/span[contains(text(), 'Closure type')]/ancestor::div[1]/following-sibling::div//span/span/text()").get() or "None"
+    care = sel.xpath("//*[@id='productFactsDesktopExpander']//span/span[contains(text(), 'Care instructions')]/ancestor::div[1]/following-sibling::div//span/span/text()").get()
+    if care!=None:
+        care = care.strip()
+    else:
+        care = "None"
+    fabric = sel.xpath("//*[@id='productFactsDesktopExpander']//span/span[contains(text(), 'Fabric type')]/ancestor::div[1]/following-sibling::div//span/span/text()").get()
+    if fabric!=None:
+        fabric = fabric.strip()
+    else:
+        fabric = "None"
+    origin = sel.xpath("//*[@id='productFactsDesktopExpander']//span/span[contains(text(), 'Origin')]/ancestor::div[1]/following-sibling::div//span/span/text()").get()
+    if origin!=None:
+        origin = origin.strip()
+    else:
+        origin = "None"    
+    closure_types = sel.xpath("//*[@id='productFactsDesktopExpander']//span/span[contains(text(), 'Closure type')]/ancestor::div[1]/following-sibling::div//span/span/text()").get()
+    if closure_types!=None:
+        closure_types = closure_types.strip()
+    else:
+        closure_types = "None"      
     first_date = sel.xpath("//*[@id='detailBullets_feature_div']//span/span[contains(normalize-space(text()), 'Date First Available')]/following-sibling::span/text()").get()
 
-    # Box element for other details
     box = sel.css("#centerCol")
+    
     brand = box.xpath("//*[@id='bylineInfo']/text()").get()
+    
     price = box.css(".a-price.a-text-price.a-size-medium.apexPriceToPay > span.a-offscreen::text").get()
-    size = box.xpath(f"//*[@id='native_dropdown_selected_size_name']/option[@value!='-1' and contains(@value,'{asin}')]/text()").get() or "Select"
-    color = box.xpath("//*[@id='variation_color_name']/div/span/text()").get() or "None"
-    if not color:
-        color = sel.css('.a-dropdown-prompt::text').get()  # Simulating JavaScript-like extraction of color
-        if color:
-            color = color.strip()
-    else:
-        color = color.strip() if color else "None"
+    # size = box.xpath(f"//*[@id='native_dropdown_selected_size_name']/option[@value!='-1' and contains(@value,'{asin}')]/text()").get()
+    # if size!=None:
+    #     size = size.strip()
+    # else:
+    #     size = "Select"
+    # color = box.xpath("//*[@id='variation_color_name']/div/span/text()").get()
+    # if color!=None:
+    #     color = color.strip()
+    # else:
+    #     color = "None"
     review = sel.xpath("//*[@id='acrCustomerReviewText']/text()").get()
-    star = sel.xpath("//*[@id='acrPopover']/span[1]/a/span/text()").get() or "None"
-
+    star = sel.xpath("//*[@id='acrPopover']/span[1]/a/span/text()").get()
+    if star!=None:
+        star = star.strip()
+    else:
+        star = "None"
     parsed = {
         "name": sel.css("#productTitle::text").get("").strip(),
         "asin": asin,
         "brand": brand,
-        "color": color,
-        "size": size,
+        "color": attribute[0],
+        "size": attribute[1],
         "price": price,
         "fabric": fabric,
         "care": care,
@@ -100,7 +155,7 @@ def parse_product(result, asin) -> ProductInfo:
 count = 0
 extracted_data = {}
 
-async def scrape_product(asin: str, session: ClientSession, semaphore: asyncio.Semaphore) -> ProductInfo:
+async def scrape_product(asin: str,attribute: list, session: ClientSession, semaphore: asyncio.Semaphore) -> ProductInfo:
     """Scrape a single product page with randomized user-agent."""
     global count
     user_agent = random.choice(USER_AGENTS)  # Rotate user agent for each request
@@ -110,7 +165,8 @@ async def scrape_product(asin: str, session: ClientSession, semaphore: asyncio.S
         try:
             async with session.get(f"https://www.amazon.com/dp/{asin}", headers=headers) as response:
                 result = await response.text()
-                parsed_data = parse_product(result, asin)
+                await asyncio.sleep(1)
+                parsed_data = parse_product(result, asin, attribute)
                 if parsed_data['name'] == '':
                     fail_dress_asin.append(asin)
                 else:
@@ -119,7 +175,11 @@ async def scrape_product(asin: str, session: ClientSession, semaphore: asyncio.S
                     # Save the result immediately after scraping
                     with open(PRODUCT_INFO_FILE, 'a') as output_file:
                         json.dump(parsed_data, output_file, indent=4)
-                        output_file.write('\n')  # Add a newline to separate each entry
+    # Write the opening square bracket if the file is empty
+                        if output_file.tell() == 0:
+                                output_file.write('[\n')
+                        else:
+                                output_file.write(',\n') # Add a newline to separate each entry
                 count += 1
                 print(count)
                 return parsed_data
@@ -135,17 +195,19 @@ async def run():
         "accept-encoding": "gzip, deflate, br",
     }
 
-    with open("variant_pants_asin.json", "r") as file:
-        all_asin = json.load(file)
-    print(len(all_asin))
+    # with open(FILTERED_PRODUCT_ASIN_FILE, "r") as file:
+    #     all_asin = json.load(file)
+    # print(len(all_asin))
     semaphore = asyncio.Semaphore(16)  # Limit to 8 concurrent requests
     
     async with aiohttp.ClientSession() as session:
         tasks = []
-        for asin in all_asin:  # Adjust the range as necessary
-            task = asyncio.create_task(scrape_product(asin=asin, session=session, semaphore=semaphore))
+        with open(FILTERED_PRODUCT_ASIN_FILE,'r') as file:
+            data = json.load(file)
+        for asin, attributes in data.items():
+            task = asyncio.create_task(scrape_product(asin=asin, attribute = attributes,session=session, semaphore=semaphore))
             tasks.append(task)
-        
+         
         # Run all the tasks concurrently
         await asyncio.gather(*tasks)
         print(extracted_data)

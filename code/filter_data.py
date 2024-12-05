@@ -1,6 +1,6 @@
 import json
-from variants import VARIANT_PRODUCT_ASIN_FILE,SEARCH_QUERY
-
+from search import SEARCH_QUERY
+VARIANT_PRODUCT_ASIN_FILE = f"data/{SEARCH_QUERY}/variant_{SEARCH_QUERY}_asin.json"
 FILTERED_PRODUCT_ASIN_FILE = f"data/{SEARCH_QUERY}/filtered_{SEARCH_QUERY}_asin.json"
 
 def filter_asins(data, color_filters, size_filters):

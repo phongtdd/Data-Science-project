@@ -7,10 +7,11 @@ from typing_extensions import TypedDict
 from parsel import Selector
 from typing import List
 import time
-from filter_data import FILTERED_PRODUCT_ASIN_FILE,SEARCH_QUERY
+from search import SEARCH_QUERY
 
-PRODUCT_INFO_FILE = f"data/{SEARCH_QUERY}/{SEARCH_QUERY}_info.json"
+FILTERED_PRODUCT_ASIN_FILE = f"data/{SEARCH_QUERY}/filtered_{SEARCH_QUERY}_asin.json"
 FAIL_TO_LOAD_ASIN_FILE = f"data/{SEARCH_QUERY}/fail_{SEARCH_QUERY}_asin.json"
+PRODUCT_INFO_FILE = f"data/{SEARCH_QUERY}/{SEARCH_QUERY}_info.json"
 
 class ProductInfo(TypedDict):
     """type hint for our scraped product result"""
