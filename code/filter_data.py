@@ -5,20 +5,20 @@ FILTERED_PRODUCT_ASIN_FILE = f"filtered_{SEARCH_QUERY}_asin.json"
 
 def filter_asins(data, color_filters, size_filters):
 
-    filtered_asins = []
+    filtered = {}
 
     for asin, attributes in data.items():
-        if len(attributes)>2:
+        if len(attributes)!=2:
             continue
         # print(attributes)
         color, size = attributes  # Unpack the color and size
          # Check if any color filter is a substring of the color attribute
-        color1_match = any(filter_color.lower() in color.lower() for filter_color in color_filters)
-        color2_match = any(filter_color.lower() in size.lower() for filter_color in color_filters)
+        color1_match = len(color.split())==1
+        color2_match = len(size.split())==1
 
         # Check if any size filter is a substring of the size attribute
-        size1_match = any(filter_size.lower() in size.lower() for filter_size in size_filters)
-        size2_match = any(filter_size.lower() in color.lower() for filter_size in size_filters)
+        size1_match = size.lower() in size_filters
+        size2_match = color.lower() in size_filters
 
         # If both color and size match, add the ASIN to the filtered list
         if color1_match and size1_match:
@@ -30,7 +30,7 @@ def filter_asins(data, color_filters, size_filters):
 
 
 color_filters = ["Black", "White", "Gray", "Beige", "Red", "Blue", "Green", "Brown", "Pink", "Purple", "Yellow"]
-size_filters = ["Small", "Medium", "Large", "X-Large", "XX-Large"]
+size_filters = ["small", "medium", "large", "x-large", "xx-large"]
 
 with open(VARIANT_PRODUCT_ASIN_FILE,'r') as file:
     data = json.load(file)

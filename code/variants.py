@@ -6,7 +6,7 @@ import httpx
 from search import SEARCH_QUERY
 from extract_asin import REMAINING_ASIN_FILE
 
-VARIANT_PRODUCT_ASIN_FILE = f"variant_{SEARCH_QUERY}_asin.json"
+VARIANT_PRODUCT_ASIN_FILE = f"data/{SEARCH_QUERY}/variant_{SEARCH_QUERY}_asin.json"
 
 
 # Headers to mimic a browser
@@ -15,7 +15,14 @@ BASE_HEADERS = [
     {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7; rv:112.0) Gecko/20100101 Firefox/112.0"},
     {"User-Agent": "Mozilla/5.0 (Linux; Android 11; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.91 Mobile Safari/537.36"},
     {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.69"},
+    {"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1"},
+    {"User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:117.0) Gecko/20100101 Firefox/117.0"},
+    {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.199 Safari/537.36"},
+    {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"},
+    {"User-Agent": "Mozilla/5.0 (Linux; Android 13; SM-G996B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.5481.77 Mobile Safari/537.36"},
+    {"User-Agent": "Mozilla/5.0 (iPad; CPU OS 15_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6 Mobile/15E148 Safari/604.1"}
 ]
+
 
 # Load ASINs from JSON file
 with open(REMAINING_ASIN_FILE, 'r') as file:
@@ -62,7 +69,6 @@ async def process_asins():
             json.dump(cleaned_entry, output_file, indent=4)
         with open(REMAINING_ASIN_FILE, "w") as output_file:
             json.dump(fail_asin, output_file, indent=4)
-            output_file.write("\n")  # Write a newline for separation between records
 
 if __name__ == "__main__":
     # Run the asynchronous process

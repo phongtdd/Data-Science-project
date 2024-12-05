@@ -1,7 +1,7 @@
 import json
 from search import SEARCH_QUERY, UNIQUE_PRODUCT_SAVE_FILE
 
-REMAINING_ASIN_FILE = f"remaining_{SEARCH_QUERY}_asin.json"
+REMAINING_ASIN_FILE = f"data/{SEARCH_QUERY}/remaining_{SEARCH_QUERY}_asin.json"
 
 # Load the JSON file
 with open(UNIQUE_PRODUCT_SAVE_FILE, "r") as file:

@@ -10,7 +10,7 @@ import re
 from urllib.parse import urljoin
 
 SEARCH_QUERY = "dress"
-UNIQUE_PRODUCT_SAVE_FILE = f"amazon_unique_{SEARCH_QUERY}.json"
+UNIQUE_PRODUCT_SAVE_FILE = f"data/{SEARCH_QUERY}/amazon_unique_{SEARCH_QUERY}.json"
 
 
 class ProductPreview(TypedDict):
