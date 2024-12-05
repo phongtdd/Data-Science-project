@@ -1,15 +1,17 @@
 import asyncio
+import httpx
 import random
 import json
 from typing_extensions import TypedDict
 from parsel import Selector
+from typing import List
 import time
-import aiohttp
-from aiohttp import ClientSession
+from search import SEARCH_QUERY
 
-PRODUCT_INFO_FILE = f"shirts_info.json"
-FAIL_TO_LOAD_ASIN_FILE = f"fail_shirt_asin.json"
-VARIANT = f"variant_shirt_asin.json"
+FILTERED_PRODUCT_ASIN_FILE = f"data/{SEARCH_QUERY}/filtered_{SEARCH_QUERY}_asin.json"
+FAIL_TO_LOAD_ASIN_FILE = f"data/{SEARCH_QUERY}/fail_{SEARCH_QUERY}_asin.json"
+PRODUCT_INFO_FILE = f"data/{SEARCH_QUERY}/{SEARCH_QUERY}_info.json"
+
 class ProductInfo(TypedDict):
     """type hint for our scraped product result"""
     name: str
@@ -29,31 +31,21 @@ class ProductInfo(TypedDict):
     url: str
 
 USER_AGENTS = [
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:112.0) Gecko/20100101 Firefox/112.0",
-    "Mozilla/5.0 (Linux; Android 10; SM-G973F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.74 Mobile Safari/537.36",
-    "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edge/124.0.4895.30",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Linux; Android 12; SM-A536W) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Mobile Safari/537.36 SamsungBrowser/19.0",
-    "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.91 Safari/537.36",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edge/124.0.4895.30",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Linux; Android 13; SM-G996B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Mobile Safari/537.36",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edge/122.0.4942.47",
-    "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    # Add your user agents here
+   "Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 6.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 5.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 5.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 6.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.0.0 Safari/537.36",
+    # Add more user agents as needed
 ]
-
-
-# Global variable for storing ASINs that failed to load
-fail_dress_asin = []
 
 # Function to extract keys (used later in `run`)
 def extract_keys(obj, parent_key=""):
@@ -68,39 +60,43 @@ def extract_keys(obj, parent_key=""):
             keys.extend(extract_keys(item, f"{parent_key}[{index}]"))
     return keys
 
-def parse_product(result, asin) -> ProductInfo:
+def parse_product(result, asin, attribute) -> ProductInfo:
     """parse Amazon's product page (e.g. https://www.amazon.com/dp/B07KR2N2GF) for essential product data"""
-    sel = Selector(text=result)
+
+    sel = Selector(text=result.text)
 
     # Extract details from "Product Information" table
     department = sel.xpath("//*[@id='detailBullets_feature_div']//span/span[contains(normalize-space(text()), 'Department')]/following-sibling::span/text()").get()
-    care = sel.xpath("//*[@id='productFactsDesktopExpander']//span/span[contains(text(), 'Care instructions')]/ancestor::div[1]/following-sibling::div//span/span/text()").get() or "None"
-    fabric = sel.xpath("//*[@id='productFactsDesktopExpander']//span/span[contains(text(), 'Fabric type')]/ancestor::div[1]/following-sibling::div//span/span/text()").get() or "None"
-    origin = sel.xpath("//*[@id='productFactsDesktopExpander']//span/span[contains(text(), 'Origin')]/ancestor::div[1]/following-sibling::div//span/span/text()").get() or "None"
-    closure_types = sel.xpath("//*[@id='productFactsDesktopExpander']//span/span[contains(text(), 'Closure type')]/ancestor::div[1]/following-sibling::div//span/span/text()").get() or "None"
+    care = sel.xpath("//*[@id='productFactsDesktopExpander']//span/span[contains(text(), 'Care instructions')]/ancestor::div[1]/following-sibling::div//span/span/text()").get()
+    if care is None:
+        care = "None"
+    fabric = sel.xpath("//*[@id='productFactsDesktopExpander']//span/span[contains(text(), 'Fabric type')]/ancestor::div[1]/following-sibling::div//span/span/text()").get()
+    if fabric is None:
+        fabric = "None"
+    origin = sel.xpath("//*[@id='productFactsDesktopExpander']//span/span[contains(text(), 'Origin')]/ancestor::div[1]/following-sibling::div//span/span/text()").get()
+    if origin is None:
+        origin = "None"    
+    closure_types = sel.xpath("//*[@id='productFactsDesktopExpander']//span/span[contains(text(), 'Closure type')]/ancestor::div[1]/following-sibling::div//span/span/text()").get()
+    if closure_types is None:
+        closure_types = "None"      
     first_date = sel.xpath("//*[@id='detailBullets_feature_div']//span/span[contains(normalize-space(text()), 'Date First Available')]/following-sibling::span/text()").get()
 
-    # Box element for other details
     box = sel.css("#centerCol")
+    
     brand = box.xpath("//*[@id='bylineInfo']/text()").get()
     price = box.css(".a-price.a-text-price.a-size-medium.apexPriceToPay > span.a-offscreen::text").get()
-    size = box.xpath(f"//*[@id='native_dropdown_selected_size_name']/option[@value!='-1' and contains(@value,'{asin}')]/text()").get() or "Select"
-    color = box.xpath("//*[@id='variation_color_name']/div/span/text()").get() or "None"
-    if not color:
-        color = sel.css('.a-dropdown-prompt::text').get()  # Simulating JavaScript-like extraction of color
-        if color:
-            color = color.strip()
-    else:
-        color = color.strip() if color else "None"
+    
     review = sel.xpath("//*[@id='acrCustomerReviewText']/text()").get()
-    star = sel.xpath("//*[@id='acrPopover']/span[1]/a/span/text()").get() or "None"
-
+    star = sel.xpath("//*[@id='acrPopover']/span[1]/a/span/text()").get()
+    if star is None:
+        star = "None"
+    
     parsed = {
         "name": sel.css("#productTitle::text").get("").strip(),
         "asin": asin,
         "brand": brand,
-        "color": color,
-        "size": size,
+        "color": attribute[0],
+        "size": attribute[1],
         "price": price,
         "fabric": fabric,
         "care": care,
@@ -116,34 +112,33 @@ def parse_product(result, asin) -> ProductInfo:
 
 count = 0
 extracted_data = {}
+fail_dress_asin = []
 
-async def scrape_product(asin: str, session: ClientSession, semaphore: asyncio.Semaphore) -> ProductInfo:
+async def scrape_product(asin: str, attribute: list, limit: httpx.Limits, timeout: httpx.Timeout, headers: dict, semaphore: asyncio.Semaphore) -> ProductInfo:
     """Scrape a single product page with randomized user-agent."""
-    global count
-    user_agent = random.choice(USER_AGENTS)  # Rotate user agent for each request
-    headers = {"user-agent": user_agent}
-    
     async with semaphore:
+        global count
+        user_agent = random.choice(USER_AGENTS)  # Rotate user agent for each request
+        headers = {"user-agent": user_agent, **headers}
+        
         try:
-            async with session.get(f"https://www.amazon.com/dp/{asin}", headers=headers) as response:
-                result = await response.text()
+            async with httpx.AsyncClient(limits=limit, timeout=timeout, headers=headers) as client:
+                response = await client.get(f"https://www.amazon.com/dp/{asin}")
                 await asyncio.sleep(1)
-                parsed_data = parse_product(result, asin)
+                parsed_data = parse_product(response, asin, attribute)
+                
                 if parsed_data['name'] == '':
                     fail_dress_asin.append(asin)
                 else:
                     extracted_data[asin] = parsed_data
-                    print("Success")
-                    # Save the result immediately after scraping
+                    print(f"Success for {asin}")
+                    # Save result immediately after scraping
                     with open(PRODUCT_INFO_FILE, 'a') as output_file:
                         json.dump(parsed_data, output_file, indent=4)
-    # Write the opening square bracket if the file is empty
-                        if output_file.tell() == 0:
-                                output_file.write('[\n')
-                        else:
-                                output_file.write(',\n') # Add a newline to separate each entry
+                        output_file.write('\n')  # Ensure each entry is written on a new line
+                
                 count += 1
-                print(count)
+                print(f"Count: {count}")
                 return parsed_data
         except Exception as e:
             print(f"Error scraping {asin}: {e}")
@@ -157,24 +152,25 @@ async def run():
         "accept-encoding": "gzip, deflate, br",
     }
 
-    with open(VARIANT, "r") as file:
-        all_asin = json.load(file)
-    print(len(all_asin))
-    semaphore = asyncio.Semaphore(16)  # Limit to 8 concurrent requests
+
     
-    async with aiohttp.ClientSession() as session:
-        tasks = []
-        for asin in all_asin:  # Adjust the range as necessary
-            task = asyncio.create_task(scrape_product(asin=asin, session=session, semaphore=semaphore))
-            tasks.append(task)
-        
-        # Run all the tasks concurrently
-        await asyncio.gather(*tasks)
-        print(extracted_data)
-        
-        # Save fail ASINs to a separate file at the end
-        with open(FAIL_TO_LOAD_ASIN_FILE, 'w') as output_file:
-            json.dump(fail_dress_asin, output_file, indent=4)
+    limits = httpx.Limits(max_connections=12)
+    semaphore = asyncio.Semaphore(12)  # Limit to 12 concurrent requests
+    
+    tasks = []
+    
+    with open(FILTERED_PRODUCT_ASIN_FILE, 'r') as file:
+        data = json.load(file)
+    for asin, attributes in data.items():
+        task = asyncio.create_task(scrape_product(asin=asin, attribute=attributes, limit=limits, timeout=httpx.Timeout(15.0), headers=BASE_HEADERS, semaphore=semaphore))
+        tasks.append(task)
+    
+    # Run all the tasks concurrently
+    await asyncio.gather(*tasks)
+
+    # Write failed ASINs to file
+    with open(FAIL_TO_LOAD_ASIN_FILE, 'w') as output_file:
+        json.dump(fail_dress_asin, output_file, indent=4)
 
 if __name__ == "__main__":
     asyncio.run(run())
