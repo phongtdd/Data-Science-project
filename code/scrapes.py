@@ -77,7 +77,7 @@ def extract_keys(obj, parent_key=""):
             keys.extend(extract_keys(item, f"{parent_key}[{index}]"))
     return keys
 
-def parse_product(result, asin) -> ProductInfo:
+def parse_product(result, asin, attribute) -> ProductInfo:
     """parse Amazon's product page (e.g. https://www.amazon.com/dp/B07KR2N2GF) for essential product data"""
 
     # the other fields can be extracted with simple css selectors
@@ -114,16 +114,16 @@ def parse_product(result, asin) -> ProductInfo:
     brand = box.xpath("//*[@id='bylineInfo']/text()").get()
     
     price = box.css(".a-price.a-text-price.a-size-medium.apexPriceToPay > span.a-offscreen::text").get()
-    size = box.xpath(f"//*[@id='native_dropdown_selected_size_name']/option[@value!='-1' and contains(@value,'{asin}')]/text()").get()
-    if size!=None:
-        size = size.strip()
-    else:
-        size = "Select"
-    color = box.xpath("//*[@id='variation_color_name']/div/span/text()").get()
-    if color!=None:
-        color = color.strip()
-    else:
-        color = "None"
+    # size = box.xpath(f"//*[@id='native_dropdown_selected_size_name']/option[@value!='-1' and contains(@value,'{asin}')]/text()").get()
+    # if size!=None:
+    #     size = size.strip()
+    # else:
+    #     size = "Select"
+    # color = box.xpath("//*[@id='variation_color_name']/div/span/text()").get()
+    # if color!=None:
+    #     color = color.strip()
+    # else:
+    #     color = "None"
     review = sel.xpath("//*[@id='acrCustomerReviewText']/text()").get()
     star = sel.xpath("//*[@id='acrPopover']/span[1]/a/span/text()").get()
     if star!=None:
@@ -134,8 +134,8 @@ def parse_product(result, asin) -> ProductInfo:
         "name": sel.css("#productTitle::text").get("").strip(),
         "asin": asin,
         "brand": brand,
-        "color": color,
-        "size": size,
+        "color": attribute[0],
+        "size": attribute[1],
         "price": price,
         "fabric": fabric,
         "care": care,
@@ -151,7 +151,7 @@ def parse_product(result, asin) -> ProductInfo:
 count = 0
 extracted_data = {}
 fail_dress_asin = []
-async def scrape_product(asin: str, limit: httpx.Limits, timeout: httpx.Timeout, headers: dict, semaphore: asyncio.Semaphore) -> ProductInfo:
+async def scrape_product(asin: str,attribute: list, limit: httpx.Limits, timeout: httpx.Timeout, headers: dict, semaphore: asyncio.Semaphore) -> ProductInfo:
     """Scrape a single product page with randomized user-agent."""
     async with semaphore:
         global count
@@ -162,7 +162,7 @@ async def scrape_product(asin: str, limit: httpx.Limits, timeout: httpx.Timeout,
             async with httpx.AsyncClient(limits=limit, timeout=timeout, headers=headers) as client:
                 response = await client.get(f"https://www.amazon.com/dp/{asin}")
                 await asyncio.sleep(1)
-                parsed_data = parse_product(response, asin)
+                parsed_data = parse_product(response, asin, attribute)
                 if parsed_data['name']=='':
                     fail_dress_asin.append(asin)
                 else:
@@ -187,14 +187,18 @@ async def run():
     with open(FAIL_TO_LOAD_ASIN_FILE, "r") as file:
         all_asin = json.load(file)
     
-    limits = httpx.Limits(max_connections=5)
-    semaphore = asyncio.Semaphore(8)  # Limit to 8 concurrent requests
+    limits = httpx.Limits(max_connections=12)
+    semaphore = asyncio.Semaphore(12)  # Limit to 8 concurrent requests
     
     tasks = []
     
-    for asin in all_asin[:5]:  # Adjust the range as necessary
-        task = asyncio.create_task(scrape_product(asin=asin, limit=limits, timeout=httpx.Timeout(15.0), headers=BASE_HEADERS, semaphore=semaphore))
+    with open(FILTERED_PRODUCT_ASIN_FILE,'r') as file:
+        data = json.load(file)
+    for asin, attributes in data.items():
+        task = asyncio.create_task(scrape_product(asin=asin, attribute = attributes, limit=limits, timeout=httpx.Timeout(15.0), headers=BASE_HEADERS, semaphore=semaphore))
         tasks.append(task)
+    
+
     
     # Run all the tasks concurrently
     await asyncio.gather(*tasks)
