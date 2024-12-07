@@ -1,0 +1,10 @@
+httpx
+random
+typing
+typing_extensions
+loguru
+beautifulsoup4
+json
+asyncio
+re
+urllib
