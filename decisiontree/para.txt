@@ -1,4 +1,4 @@
-Best Parameters: {'max_depth': 25, 'min_samples_leaf': 1, 'min_samples_split': 15}
-RMAE: 0.8705944055944066
-RMSE: 9.806825184706724
-R²: 0.5908203605982181
+Best Parameters: {'max_depth': 30, 'min_samples_leaf': 1, 'min_samples_split': 10}
+RMAE: 9.237055564881302e-14
+RMSE: 6.012126378338498
+R²: 0.8077611447172782
