@@ -6,6 +6,7 @@ from UI.Model_Rerun.fcnn.fcnn_model import predict as fcnn_predict
 from UI.Model_Rerun.DecisionTree.DT_model import predict as dt_predict
 from UI.Model_Rerun.RandomForest.RF_model import predict as rf_predict
 from UI.Model_Rerun.MLP.mlp_model import predict as mlp_predict
+import UI.utils as utils
 
 def make_prediction(df):
     expected_features = ['brand', 'color', 'size', 'department', 'origin', 'rating', 'star', 'Polyester',
@@ -64,13 +65,10 @@ def get_manual_input():
 # Get data
 original_data = pd.read_json(r"UI\final_data.json")
 
-df = pd.read_json(r"UI\preprocess_data.json")
-
-def hide_input():
-    st.session_state.show_input = False
-
-if "show_input" not in st.session_state:
-    st.session_state.show_input = True
+if 'df' not in st.session_state:
+    st.session_state.df = pd.read_json(r"UI\preprocess_data.json")
+original_data = pd.read_json(r"UI\final_data.json")
+df = st.session_state.df
 
 st.title("Model Selection and Prediction")
 
@@ -123,14 +121,62 @@ elif model == "Enter the data manually":
     for other in others:
         input_data[other] = 0
         
+    size_options = ['Small', 'Medium', 'Large', 'X-Large', 'XX-Large']
+    department_options = ['Women', 'Men']
+    origin_options = ['Imported', 'Made in USA']
+    
     for col in columns:
-        # Have to double check value if available
-        value = st.text_input(f"Enter {col}:")
-        input_data[col] = value
+        if col == 'brand':
+            value = st.text_input(f"Enter {col}:")
+            if value:
+                encoded_value = utils.encode_brand(value)
+                if encoded_value is not None:
+                    input_data[col] = encoded_value
+                else:
+                    st.error(f"Invalid value for {col}. Please enter a valid brand.")
+                    input_data[col] = None
+            else:
+                input_data[col] = None
+        elif col == 'color':
+            value = st.text_input(f"Enter {col}:")
+            if value:
+                encoded_value = utils.encode_color(value)
+                if encoded_value is not None:
+                    input_data[col] = encoded_value
+                else:
+                    st.error(f"Invalid value for {col}. Please enter a valid color.")
+                    input_data[col] = None
+            else:
+                input_data[col] = None
+        elif col == 'size':
+            selected_size = st.selectbox(f"Select {col}:", size_options)
+            encoded_size = utils.encode_size(selected_size)
+            if encoded_size is None:
+                st.error(f"Invalid size '{selected_size}', please select a valid size.")
+                input_data[col] = None
+            else:
+                input_data[col] = encoded_size
+        elif col == 'department':
+            selected_department = st.selectbox(f"Select {col}:", department_options)
+            encoded_department = utils.encode_department(selected_department)
+            if encoded_department is None:
+                st.error(f"Invalid department '{selected_department}', please select a valid department.")
+                input_data[col] = None
+            else:
+                input_data[col] = encoded_department
+        elif col == 'origin':
+            selected_origin = st.selectbox(f"Select {col}:", origin_options)
+            encoded_origin = utils.encode_origin(selected_origin)
+            if encoded_origin is None:
+                st.error(f"Invalid origin '{selected_origin}', please select a valid origin.")
+                input_data[col] = None
+            else:
+                input_data[col] = encoded_origin
         
-    for col in num_columns:
-        value = st.text_input(f"Enter {col}:")
-        input_data[col] = value
+    rating = st.number_input("Enter number of ratings:", min_value=0, value=0)
+    input_data['rating'] = rating   
+    star = st.number_input("Enter star rating", min_value=0, max_value=5, value=0)
+    input_data['star'] = star
               
     selected_care_instructions = st.multiselect("Select care instructions:", care_instruction)
     for instruction in selected_care_instructions:
@@ -147,20 +193,21 @@ elif model == "Enter the data manually":
         for i, (material, content) in enumerate(st.session_state.material_inputs):
             cols = st.columns(2)
             with cols[0]:
-                st.selectbox(
+                material_temp = st.selectbox(
                     f"Material {i + 1}",
                     ['Polyester', 'Spandex', 'Nylon', 'Cotton', 'Rayon', 'Acrylic', 'Modal', 'Wool', 'Lyocell', 'Leather', 'Linen', 'Silk'],
                     index=0 if material is None else ['Polyester', 'Spandex', 'Nylon', 'Cotton', 'Rayon', 'Acrylic', 'Modal', 'Wool', 'Lyocell', 'Leather', 'Linen', 'Silk'].index(material),
                     key=f"material_{i}",
                 )
             with cols[1]:
-                st.number_input(
+                content_temp = st.number_input(
                     f"Content (%)",
                     min_value=0,
                     max_value=100,
                     value=content if content is not None else 0,
                     key=f"content_{i}",
                 )
+            st.session_state.material_inputs[i] = (material_temp,content_temp)
 
     def add_material_button():
         if st.button("Add Material"):
@@ -168,18 +215,24 @@ elif model == "Enter the data manually":
     
     add_material_button()
     display_material_inputs()
-    if st.button("Submit", on_click=hide_input):
-        for i in range(len(st.session_state.material_inputs)):
-            material = st.session_state.get(f"material_{i}")
-            content = st.session_state.get(f"content_{i}")
-            if material is not None and content is not None:
-                input_data[material] = round(int(content) / 100, 2)
+
+    for i in range(len(st.session_state.material_inputs)):
+        material = st.session_state.get(f"material_{i}")
+        content = st.session_state.get(f"content_{i}")
+        if material is not None and content is not None:
+            input_data[material] = round(int(content) / 100, 2)
 
     # Chuyển dữ liệu thành DataFrame
-    df = pd.DataFrame([input_data])
-    df = df.apply(pd.to_numeric, errors='coerce')
-    st.write(df)
-    make_prediction(df)
+    custom_df = pd.DataFrame([input_data])
+    custom_df = custom_df.apply(pd.to_numeric, errors='coerce')
+    missing_columns = custom_df.columns[custom_df.isnull().any()].tolist()
+
+    if missing_columns:
+        st.error(f"The following fields are missing: {', '.join(missing_columns)}. Please fill in all required fields.")
+    else:
+        st.write(custom_df)
+        make_prediction(custom_df)
+
 
     
     
