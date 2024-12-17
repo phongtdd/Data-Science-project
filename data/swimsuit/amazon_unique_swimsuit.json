@@ -1,0 +1,882 @@
+[
+    {
+        "url": "https://www.amazon.com/Viottiset-Piece-Swimsuit-Control-Bathing-Monokini/dp/B0CX8KHJB1/ref=sr_1_5",
+        "asin": "B0CX8KHJB1"
+    },
+    {
+        "url": "https://www.amazon.com/Aleumdr-Athletic-Swimsuits-Training-Swimwear/dp/B0BKXZLLMP/ref=sr_1_6",
+        "asin": "B0BKXZLLMP"
+    },
+    {
+        "url": "https://www.amazon.com/SUUKSESS-Swimsuits-Slimming-Monokini-Swimwear/dp/B0D298P8YN/ref=sr_1_7",
+        "asin": "B0D298P8YN"
+    },
+    {
+        "url": "https://www.amazon.com/ATTRACO-Athletic-Swimsuits-Kneeskin-Racerback/dp/B0CYZCXHB9/ref=sr_1_8",
+        "asin": "B0CYZCXHB9"
+    },
+    {
+        "url": "https://www.amazon.com/Aleumdr-Swimsuits-Training-Athletic-Monokini/dp/B081TCMRL4/ref=sr_1_9",
+        "asin": "B081TCMRL4"
+    },
+    {
+        "url": "https://www.amazon.com/Runtlly-One-Shoulder-Swimsuit-Black-XXL/dp/B01N6NEMEH/ref=sr_1_10",
+        "asin": "B01N6NEMEH"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Bathing-Wrapped-Swimwear/dp/B0CNXNDK69/ref=sr_1_11",
+        "asin": "B0CNXNDK69"
+    },
+    {
+        "url": "https://www.amazon.com/Limeeke-Swimsuit-Shoulder-Swimwear-Monokini/dp/B09R7DVCGF/ref=sr_1_12",
+        "asin": "B09R7DVCGF"
+    },
+    {
+        "url": "https://www.amazon.com/SUUKSESS-Slimming-Swimsuits-Shoulder-Monokini/dp/B0D2931GZ4/ref=sr_1_13",
+        "asin": "B0D2931GZ4"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Asymmetrical-Shoulder-Removable/dp/B0DKHYVR68/ref=sr_1_18",
+        "asin": "B0DKHYVR68"
+    },
+    {
+        "url": "https://www.amazon.com/SUUKSESS-Slimming-Control-Swimsuits-Monokini/dp/B0CP76CP7W/ref=sr_1_19",
+        "asin": "B0CP76CP7W"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Control-Double-Straps/dp/B0C89LD6L7/ref=sr_1_20",
+        "asin": "B0C89LD6L7"
+    },
+    {
+        "url": "https://www.amazon.com/Meyeeka-Swimsuit-Control-Bathing-Waisted/dp/B0BPWPPDVK/ref=sr_1_21",
+        "asin": "B0BPWPPDVK"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Control-Sculpting-Swimwear/dp/B0CXPSFFNW/ref=sr_1_26",
+        "asin": "B0CXPSFFNW"
+    },
+    {
+        "url": "https://www.amazon.com/Eomenie-Swimsuit-Control-Slimming-Swimwear/dp/B0D1VS72HD/ref=sr_1_27",
+        "asin": "B0D1VS72HD"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Piece-Swimsuit-Women-Bathing/dp/B0BS6NNXXT/ref=sr_1_28",
+        "asin": "B0BS6NNXXT"
+    },
+    {
+        "url": "https://www.amazon.com/Eomenie-Swimsuit-Slimming-Spaghetti-Swimwear/dp/B0D4R1T3BD/ref=sr_1_29",
+        "asin": "B0D4R1T3BD"
+    },
+    {
+        "url": "https://www.amazon.com/BMJL-Swimsuit-Adjustable-Bathing-Swimsuits/dp/B0CMGVYG2B/ref=sr_1_30",
+        "asin": "B0CMGVYG2B"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Control-Adjustable-Swimwear/dp/B0CP9LC2QY/ref=sr_1_31",
+        "asin": "B0CP9LC2QY"
+    },
+    {
+        "url": "https://www.amazon.com/UNOW-Training-Racerback-Slimming-Swimsuit/dp/B00DS9A4HE/ref=sr_1_32",
+        "asin": "B00DS9A4HE"
+    },
+    {
+        "url": "https://www.amazon.com/BMJL-Swimsuits-Adjustable-Bathing-Swimwear/dp/B0DKSZX9HG/ref=sr_1_33",
+        "asin": "B0DKSZX9HG"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Control-Leopard-Bathing/dp/B0CTCNH8ZJ/ref=sr_1_34",
+        "asin": "B0CTCNH8ZJ"
+    },
+    {
+        "url": "https://www.amazon.com/BMJL-Control-Swimsuits-Slimming-Swimsuit/dp/B0CMGPRB91/ref=sr_1_35",
+        "asin": "B0CMGPRB91"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Bathing-Asymmetric-Shoulder/dp/B0D9YDZ5KS/ref=sr_1_36",
+        "asin": "B0D9YDZ5KS"
+    },
+    {
+        "url": "https://www.amazon.com/Swimsuits-Backless-Slimming-Swimwear-Adjustable/dp/B0D128WFR9/ref=sr_1_37",
+        "asin": "B0D128WFR9"
+    },
+    {
+        "url": "https://www.amazon.com/Aleumdr-Swimwear-Swimsuits-Backless-Monokini/dp/B081TF2N8T/ref=sr_1_38",
+        "asin": "B081TF2N8T"
+    },
+    {
+        "url": "https://www.amazon.com/SUUKSESS-Slimming-Control-Swimsuits-Monokini/dp/B0CZ39NCV8/ref=sr_1_39",
+        "asin": "B0CZ39NCV8"
+    },
+    {
+        "url": "https://www.amazon.com/FRIOMIRE-Swimsuits-Control-Swimsuit-Striped-XL/dp/B0D3XFPCHM/ref=sr_1_40",
+        "asin": "B0D3XFPCHM"
+    },
+    {
+        "url": "https://www.amazon.com/SUUKSESS-Control-Swimsuits-Monokini-Bathing/dp/B0BNKWS11R/ref=sr_1_41",
+        "asin": "B0BNKWS11R"
+    },
+    {
+        "url": "https://www.amazon.com/Blooming-Jelly-Swimsuits-Slimming-Swimwear/dp/B0CLL59RJK/ref=sr_1_42",
+        "asin": "B0CLL59RJK"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Womens-Swimsuit-Scalloped-Bathing/dp/B0CTCNXXNJ/ref=sr_1_43",
+        "asin": "B0CTCNXXNJ"
+    },
+    {
+        "url": "https://www.amazon.com/Ewedoos-Athletic-Swimsuit-Adjustable-Racerback/dp/B0CTC4L5PY/ref=sr_1_44",
+        "asin": "B0CTC4L5PY"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Shoulder-Control-Slimming/dp/B0CW9KQYXD/ref=sr_1_45",
+        "asin": "B0CW9KQYXD"
+    },
+    {
+        "url": "https://www.amazon.com/BONIEE-Swimsuits-Control-Swimwear-Slimming/dp/B0CYZJC7PL/ref=sr_1_46",
+        "asin": "B0CYZJC7PL"
+    },
+    {
+        "url": "https://www.amazon.com/Blooming-Jelly-Swimsuit-Drawstring-Swimwear/dp/B0DLW9JMGT/ref=sr_1_47",
+        "asin": "B0DLW9JMGT"
+    },
+    {
+        "url": "https://www.amazon.com/Aleumdr-Athletic-Swimsuit-Training-Bathing/dp/B0CNZYPCGZ/ref=sr_1_48",
+        "asin": "B0CNZYPCGZ"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Control-Bathing-Adjustable/dp/B0DL9C24X6/ref=sr_1_49",
+        "asin": "B0DL9C24X6"
+    },
+    {
+        "url": "https://www.amazon.com/Eomenie-Swimsuit-Control-Spaghetti-Swimwear/dp/B0D4QZ9TM2/ref=sr_1_50",
+        "asin": "B0D4QZ9TM2"
+    },
+    {
+        "url": "https://www.amazon.com/ZAFUL-Womens-Bathing-Swimsuit-Swimwear/dp/B0CMD13VZ1/ref=sr_1_51",
+        "asin": "B0CMD13VZ1"
+    },
+    {
+        "url": "https://www.amazon.com/Blooming-Jelly-Control-Swimsuits-Swimsuit/dp/B0BMFMXJM5/ref=sr_1_52",
+        "asin": "B0BMFMXJM5"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Bathing-Crisscross-Adjustable/dp/B0B6HV6JZ3/ref=sr_1_53",
+        "asin": "B0B6HV6JZ3"
+    },
+    {
+        "url": "https://www.amazon.com/Kanu-Surf-Hurricane-1-Piece-Swimsuit/dp/B0BSDSWT6T/ref=sr_1_54",
+        "asin": "B0BSDSWT6T"
+    },
+    {
+        "url": "https://www.amazon.com/ZAFUL-One-Piece-Bathing-Swimwear-Swimsuits/dp/B0CM97K5B3/ref=sr_1_55",
+        "asin": "B0CM97K5B3"
+    },
+    {
+        "url": "https://www.amazon.com/Eomenie-Swimsuits-Control-Bathing-Swimwear/dp/B0C2P1K541/ref=sr_1_56",
+        "asin": "B0C2P1K541"
+    },
+    {
+        "url": "https://www.amazon.com/Maxine-Hollywood-Standard-Swimsuit-Dandelion/dp/B0BCQLSGDH/ref=sr_1_57",
+        "asin": "B0BCQLSGDH"
+    },
+    {
+        "url": "https://www.amazon.com/Upopby-Vintage-Swimsuits-Control-Swimwear/dp/B07RR7SKXB/ref=sr_1_58",
+        "asin": "B07RR7SKXB"
+    },
+    {
+        "url": "https://www.amazon.com/TOLENY-Shoulder-Swimsuit-Monokini-Bikinis/dp/B0BNHXQ3XX/ref=sr_1_59",
+        "asin": "B0BNHXQ3XX"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Womens-Swimsuit-Neckline-Bathing/dp/B0B77BXSPB/ref=sr_1_60",
+        "asin": "B0B77BXSPB"
+    },
+    {
+        "url": "https://www.amazon.com/Minmaxmum-Swimsuit-Backless-Adjustable-Spaghetti/dp/B0CNGMDRRH/ref=sr_1_53",
+        "asin": "B0CNGMDRRH"
+    },
+    {
+        "url": "https://www.amazon.com/KI-LAPHEE-Swimsuits-Control-Swimwear/dp/B09PDFRX63/ref=sr_1_54",
+        "asin": "B09PDFRX63"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Control-Bathing-Multicolor/dp/B0BM8TD4Z4/ref=sr_1_55",
+        "asin": "B0BM8TD4Z4"
+    },
+    {
+        "url": "https://www.amazon.com/SUUKSESS-Slimming-Swimsuits-Control-Bathing/dp/B0B5XSHP74/ref=sr_1_56",
+        "asin": "B0B5XSHP74"
+    },
+    {
+        "url": "https://www.amazon.com/Blooming-Jelly-Control-Swimsuits-Drawstring/dp/B0D7G32QGY/ref=sr_1_57",
+        "asin": "B0D7G32QGY"
+    },
+    {
+        "url": "https://www.amazon.com/LAPHEE-ROSE-Swimsuit-Control-Swimwear/dp/B09JSGHVRD/ref=sr_1_58",
+        "asin": "B09JSGHVRD"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Bathing-Paisley-Swimwear/dp/B0CKHF2LVS/ref=sr_1_63",
+        "asin": "B0CKHF2LVS"
+    },
+    {
+        "url": "https://www.amazon.com/Blooming-Jelly-Swimsuit-Slimming-Flattering/dp/B0D2HZYFR8/ref=sr_1_64",
+        "asin": "B0D2HZYFR8"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Womens-Swimsuit-Scallop-Bathing/dp/B08YYR6S22/ref=sr_1_65",
+        "asin": "B08YYR6S22"
+    },
+    {
+        "url": "https://www.amazon.com/Eomenie-Swimsuit-Slimming-Control-Swimwear/dp/B0CQP8WVZ8/ref=sr_1_66",
+        "asin": "B0CQP8WVZ8"
+    },
+    {
+        "url": "https://www.amazon.com/Piece-Bathing-Control-Swimsuit-Womens/dp/B0BD34TTZ8/ref=sr_1_71",
+        "asin": "B0BD34TTZ8"
+    },
+    {
+        "url": "https://www.amazon.com/Limeeke-Swimsuit-Monokini-Swimwear-Backless/dp/B0B3SR3QMT/ref=sr_1_72",
+        "asin": "B0B3SR3QMT"
+    },
+    {
+        "url": "https://www.amazon.com/Ekouaer-Elegant-Inspired-Monokinis-Swimsuit/dp/B074FYHVRR/ref=sr_1_73",
+        "asin": "B074FYHVRR"
+    },
+    {
+        "url": "https://www.amazon.com/SUUKSESS-Slimming-Waisted-Swimsuit-Crisscross/dp/B0CZM61BK1/ref=sr_1_74",
+        "asin": "B0CZM61BK1"
+    },
+    {
+        "url": "https://www.amazon.com/HAIVIDO-Swimsuits-Adjustable-Coverage-Swimwear/dp/B0DBGZ2M83/ref=sr_1_75",
+        "asin": "B0DBGZ2M83"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Womens-Swimsuit-Control-Bathing/dp/B08XZ146LM/ref=sr_1_76",
+        "asin": "B08XZ146LM"
+    },
+    {
+        "url": "https://www.amazon.com/Eomenie-Swimsuits-Control-Waisted-Swimsuit/dp/B09NY4FJFH/ref=sr_1_77",
+        "asin": "B09NY4FJFH"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Piece-Swimsuit-Bathing-Ruched/dp/B0B3HQPCSM/ref=sr_1_78",
+        "asin": "B0B3HQPCSM"
+    },
+    {
+        "url": "https://www.amazon.com/AIMAGE-Swimsuit-Swimwear-Slimming-Colorful/dp/B0CKXB82WD/ref=sr_1_79",
+        "asin": "B0CKXB82WD"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Womens-Solid-Color-Swimsuit/dp/B0816759WL/ref=sr_1_80",
+        "asin": "B0816759WL"
+    },
+    {
+        "url": "https://www.amazon.com/Herseas-Athletic-Swimsuit-Crisscross-Training/dp/B0CKHNYQB1/ref=sr_1_81",
+        "asin": "B0CKHNYQB1"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Scalloped-Textured-Stitching/dp/B0CV4VM2PG/ref=sr_1_82",
+        "asin": "B0CV4VM2PG"
+    },
+    {
+        "url": "https://www.amazon.com/Ekouaer-Plus-Size-Printing-Shaping-Swimsuit/dp/B07BJZ78F6/ref=sr_1_83",
+        "asin": "B07BJZ78F6"
+    },
+    {
+        "url": "https://www.amazon.com/Aleumdr-Swimsuit-Control-Bathing-Swimwear/dp/B0CLNF8Z6K/ref=sr_1_84",
+        "asin": "B0CLNF8Z6K"
+    },
+    {
+        "url": "https://www.amazon.com/Aqua-Regina-Swimsuit-Women-One/dp/B0CRRDFGCD/ref=sr_1_85",
+        "asin": "B0CRRDFGCD"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Womens-Swimsuit-Bathing-Swimwear/dp/B0C8TGTW5Y/ref=sr_1_86",
+        "asin": "B0C8TGTW5Y"
+    },
+    {
+        "url": "https://www.amazon.com/BEILON-Shoulder-Swimsuit-Coverage-Z-Flower1/dp/B0CMD1BH9Z/ref=sr_1_87",
+        "asin": "B0CMD1BH9Z"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Bathing-Control-Swimwear/dp/B0C7R3TFH5/ref=sr_1_88",
+        "asin": "B0C7R3TFH5"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Womens-Swimsuit-Adjustable-Bathing/dp/B0CS5Q2TQY/ref=sr_1_89",
+        "asin": "B0CS5Q2TQY"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Bathing-Adjustable-Swimwear/dp/B0BCQ57CS2/ref=sr_1_90",
+        "asin": "B0BCQ57CS2"
+    },
+    {
+        "url": "https://www.amazon.com/Viottiset-Shoulder-Swimsuit-Control-Bathing/dp/B0BPCHRM6H/ref=sr_1_91",
+        "asin": "B0BPCHRM6H"
+    },
+    {
+        "url": "https://www.amazon.com/Upopby-Athletic-Swimsuit-Crisscross-Racerback/dp/B0894DMP1X/ref=sr_1_92",
+        "asin": "B0894DMP1X"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Zipper-Sleeve-Bathing/dp/B09V1B3VQH/ref=sr_1_93",
+        "asin": "B09V1B3VQH"
+    },
+    {
+        "url": "https://www.amazon.com/KI-LAPHEE-Swimsuits-Control-Swimwear/dp/B0BJTKTRPZ/ref=sr_1_94",
+        "asin": "B0BJTKTRPZ"
+    },
+    {
+        "url": "https://www.amazon.com/HAIVIDO-Swimsuit-Control-Slimming-Bathing/dp/B0CFGWVTS7/ref=sr_1_95",
+        "asin": "B0CFGWVTS7"
+    },
+    {
+        "url": "https://www.amazon.com/Viottiset-Drawstring-Swimsuit-Backless-Bathing/dp/B08ZHKRKSV/ref=sr_1_96",
+        "asin": "B08ZHKRKSV"
+    },
+    {
+        "url": "https://www.amazon.com/KI-LAPHEE-Swimsuits-Control-Swimwear/dp/B08VH4T4LY/ref=sr_1_97",
+        "asin": "B08VH4T4LY"
+    },
+    {
+        "url": "https://www.amazon.com/Dokotoo-One-Piece-Asymmetric-Removable-Monokinis/dp/B0CRZD18V4/ref=sr_1_98",
+        "asin": "B0CRZD18V4"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Bathing-Removable-Swimwear/dp/B0CPM25P8T/ref=sr_1_99",
+        "asin": "B0CPM25P8T"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuits-Crisscross-Swimwear-Midnight/dp/B0D4MB74MY/ref=sr_1_100",
+        "asin": "B0D4MB74MY"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Control-Sculpting-Swimwear/dp/B0D5CWJ3P7/ref=sr_1_101",
+        "asin": "B0D5CWJ3P7"
+    },
+    {
+        "url": "https://www.amazon.com/Blooming-Jelly-Swimsuit-Swimwear-Coverage/dp/B0CNKB8T4G/ref=sr_1_102",
+        "asin": "B0CNKB8T4G"
+    },
+    {
+        "url": "https://www.amazon.com/Memashore-Slimming-Monokini-Coverage-Longline/dp/B0CY8X49ZM/ref=sr_1_103",
+        "asin": "B0CY8X49ZM"
+    },
+    {
+        "url": "https://www.amazon.com/Womens-Swimsuit-Control-Bathing-Swimwear/dp/B0CY2CCX6C/ref=sr_1_104",
+        "asin": "B0CY2CCX6C"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Bathing-Ruffle-Control/dp/B0C1BVP2Y2/ref=sr_1_105",
+        "asin": "B0C1BVP2Y2"
+    },
+    {
+        "url": "https://www.amazon.com/Eomenie-Swimdress-Swimsuit-Control-Dresses/dp/B0CRR7C5W1/ref=sr_1_106",
+        "asin": "B0CRR7C5W1"
+    },
+    {
+        "url": "https://www.amazon.com/BMJL-Swimsuit-Slimming-Swimwear-Green%EF%BC%8CXL/dp/B0CSFZ7B6F/ref=sr_1_107",
+        "asin": "B0CSFZ7B6F"
+    },
+    {
+        "url": "https://www.amazon.com/BMJL-Swimsuit-Control-Bathing-Swimwear/dp/B0CNR8WZ1T/ref=sr_1_108",
+        "asin": "B0CNR8WZ1T"
+    },
+    {
+        "url": "https://www.amazon.com/Blooming-Jelly-Swimsuit-Control-Swimwear/dp/B0CLL497RQ/ref=sr_1_101",
+        "asin": "B0CLL497RQ"
+    },
+    {
+        "url": "https://www.amazon.com/Eomenie-Control-Swimsuit-Slimming-Swimwear/dp/B0CQ2WG8RQ/ref=sr_1_102",
+        "asin": "B0CQ2WG8RQ"
+    },
+    {
+        "url": "https://www.amazon.com/Halcurt-Swimsuit-Athletic-Racerback-Conservative/dp/B0CY23D962/ref=sr_1_103",
+        "asin": "B0CY23D962"
+    },
+    {
+        "url": "https://www.amazon.com/Dixperfect-Suit-Deep-Swimsuit-Swimwear-Monokini-Black-XL/dp/B0B24NWXFJ/ref=sr_1_104",
+        "asin": "B0B24NWXFJ"
+    },
+    {
+        "url": "https://www.amazon.com/Swimsuits-Swimwear-Control-Bathing-X-Large/dp/B09WTY5HBQ/ref=sr_1_105",
+        "asin": "B09WTY5HBQ"
+    },
+    {
+        "url": "https://www.amazon.com/BMJL-Womens-Swimsuits-Control-Bathing/dp/B0CM33ZLXL/ref=sr_1_106",
+        "asin": "B0CM33ZLXL"
+    },
+    {
+        "url": "https://www.amazon.com/MiYang-Shaping-Swimsuit-One-Piece-Swimwear/dp/B01AXSDFFU/ref=sr_1_111",
+        "asin": "B01AXSDFFU"
+    },
+    {
+        "url": "https://www.amazon.com/SOCIALA-Ribbed-Swimsuits-Bathing-Monokinis/dp/B08VS91L8J/ref=sr_1_112",
+        "asin": "B08VS91L8J"
+    },
+    {
+        "url": "https://www.amazon.com/Meyeeka-Womens-Scoop-Monokini-Swimsuit/dp/B081W72B9N/ref=sr_1_113",
+        "asin": "B081W72B9N"
+    },
+    {
+        "url": "https://www.amazon.com/Eukivntn-Athletic-Swimwear-Swimsuit-Training/dp/B092LWPKYR/ref=sr_1_114",
+        "asin": "B092LWPKYR"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Bathing-Cutout-Adjustable/dp/B0CKR3RL1B/ref=sr_1_119",
+        "asin": "B0CKR3RL1B"
+    },
+    {
+        "url": "https://www.amazon.com/Upgraded-One-Piece-Swimsuit-Women/dp/B0C2KGQWQN/ref=sr_1_120",
+        "asin": "B0C2KGQWQN"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Womens-Swimsuit-Control-Adjustable/dp/B0CZRH351R/ref=sr_1_121",
+        "asin": "B0CZRH351R"
+    },
+    {
+        "url": "https://www.amazon.com/YELAIVP-Swimsuits-Bathing-Swimwear-Bodysuit/dp/B0928GRG9C/ref=sr_1_122",
+        "asin": "B0928GRG9C"
+    },
+    {
+        "url": "https://www.amazon.com/Eomenie-Swimdress-Swimsuits-Control-Dresses/dp/B0C39NYQ46/ref=sr_1_123",
+        "asin": "B0C39NYQ46"
+    },
+    {
+        "url": "https://www.amazon.com/RELLECIGA-Womens-Swimsuit-Bathing-X-Large/dp/B0CLQYLC3T/ref=sr_1_124",
+        "asin": "B0CLQYLC3T"
+    },
+    {
+        "url": "https://www.amazon.com/SOCIALA-Swimsuit-Bathing-Swimwear-Monokini/dp/B0CLTWB4V9/ref=sr_1_125",
+        "asin": "B0CLTWB4V9"
+    },
+    {
+        "url": "https://www.amazon.com/Dixperfect-Trend-Swimsuit-Straps-X-Large/dp/B0711ZXW2V/ref=sr_1_126",
+        "asin": "B0711ZXW2V"
+    },
+    {
+        "url": "https://www.amazon.com/Sporlike-Swimsuit-V-Neck-Bathing-Monokini/dp/B07PSDMR1N/ref=sr_1_127",
+        "asin": "B07PSDMR1N"
+    },
+    {
+        "url": "https://www.amazon.com/Aleumdr-Swimsuit-Control-Bathing-SwimwearBlock/dp/B0CPXN98J4/ref=sr_1_128",
+        "asin": "B0CPXN98J4"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Bathing-Spaghetti-Straps/dp/B09ZHS2NHP/ref=sr_1_129",
+        "asin": "B09ZHS2NHP"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Bathing-Adjustable-Slimming-Swimsuit/dp/B0CNSYFZ92/ref=sr_1_130",
+        "asin": "B0CNSYFZ92"
+    },
+    {
+        "url": "https://www.amazon.com/Leoparts-Womens-Retro-Swimsuits-Bathing/dp/B08R1QK746/ref=sr_1_131",
+        "asin": "B08R1QK746"
+    },
+    {
+        "url": "https://www.amazon.com/AAleumdr-Athletic-Swimsuit-Racerback-Resistance/dp/B0CLYFW1DB/ref=sr_1_132",
+        "asin": "B0CLYFW1DB"
+    },
+    {
+        "url": "https://www.amazon.com/Aleumdr-Control-Swimsuit-Bathing-Swimwear/dp/B0BN2ZHG2W/ref=sr_1_133",
+        "asin": "B0BN2ZHG2W"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Bathing-Crisscross-Adjustable/dp/B0DBHFCZ49/ref=sr_1_134",
+        "asin": "B0DBHFCZ49"
+    },
+    {
+        "url": "https://www.amazon.com/RELLECIGA-Womens-Swimwear-Bathing-X-Large/dp/B07THSVYCN/ref=sr_1_135",
+        "asin": "B07THSVYCN"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Womens-Bowknot-Bathing-Swimsuit/dp/B07NV5BL1N/ref=sr_1_136",
+        "asin": "B07NV5BL1N"
+    },
+    {
+        "url": "https://www.amazon.com/IBL-Bandeau-Adjustable-Removable-Atmosphere/dp/B0CZ3RQB4T/ref=sr_1_137",
+        "asin": "B0CZ3RQB4T"
+    },
+    {
+        "url": "https://www.amazon.com/NEOSAN-Womens-Swimsuit-Bathing-Monokinis/dp/B0C18G49ZF/ref=sr_1_138",
+        "asin": "B0C18G49ZF"
+    },
+    {
+        "url": "https://www.amazon.com/Wantdo-Bathing-Elegant-Crossover-Swimsuit/dp/B0795RRR5Y/ref=sr_1_139",
+        "asin": "B0795RRR5Y"
+    },
+    {
+        "url": "https://www.amazon.com/ZAFUL-Swimsuit-Bathing-Crisscross-Monokini/dp/B0BV9VSTML/ref=sr_1_140",
+        "asin": "B0BV9VSTML"
+    },
+    {
+        "url": "https://www.amazon.com/Ekouaer-Swimwear-Backless-Swimsuits-6043-black1/dp/B07CTFN3L7/ref=sr_1_141",
+        "asin": "B07CTFN3L7"
+    },
+    {
+        "url": "https://www.amazon.com/AONTUS-Hawaiin-Swimsuits-Control-Swimwear/dp/B08KD6THYD/ref=sr_1_142",
+        "asin": "B08KD6THYD"
+    },
+    {
+        "url": "https://www.amazon.com/Swimsuit-Drawstring-Control-Monokini-Chocolate/dp/B0CSFN2WT6/ref=sr_1_143",
+        "asin": "B0CSFN2WT6"
+    },
+    {
+        "url": "https://www.amazon.com/PERONA-Control-Swimsuit-Bathing-Swimwear/dp/B07GQ75FJP/ref=sr_1_144",
+        "asin": "B07GQ75FJP"
+    },
+    {
+        "url": "https://www.amazon.com/Dixperfect-Inspired-Swimwear-Bathing-Black-1/dp/B07QXHR4M7/ref=sr_1_145",
+        "asin": "B07QXHR4M7"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Bathing-Swimwear-Adjustable/dp/B0CM9FNRX2/ref=sr_1_146",
+        "asin": "B0CM9FNRX2"
+    },
+    {
+        "url": "https://www.amazon.com/VIMPUNEC-Control-Swimsuit-Waisted-Swimwear/dp/B0CNX1XY9Z/ref=sr_1_147",
+        "asin": "B0CNX1XY9Z"
+    },
+    {
+        "url": "https://www.amazon.com/Eomenie-Shoulder-Swimsuit-Drawstring-Swimwear/dp/B0BRKBZLC1/ref=sr_1_148",
+        "asin": "B0BRKBZLC1"
+    },
+    {
+        "url": "https://www.amazon.com/Blanca-Goddess-Rouched-Lingerie-Swimsuit/dp/B08GWHMS8R/ref=sr_1_149",
+        "asin": "B08GWHMS8R"
+    },
+    {
+        "url": "https://www.amazon.com/Swimsuit-Slimming-Bathing-Control-Adjustable/dp/B0CMX5XDK4/ref=sr_1_150",
+        "asin": "B0CMX5XDK4"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Slimming-Sculpting-Adjustable/dp/B0D7CFT8P2/ref=sr_1_151",
+        "asin": "B0D7CFT8P2"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Womens-Swimsuit-Bathing-Cheeky/dp/B0D9W6MT22/ref=sr_1_152",
+        "asin": "B0D9W6MT22"
+    },
+    {
+        "url": "https://www.amazon.com/ZAFUL-Textured-Swimsuit-Control-Monikini/dp/B0CQ5417G8/ref=sr_1_153",
+        "asin": "B0CQ5417G8"
+    },
+    {
+        "url": "https://www.amazon.com/Annbon-Swimsuit-Conservative-Monokini-Swimwear/dp/B08NX2V7MN/ref=sr_1_154",
+        "asin": "B08NX2V7MN"
+    },
+    {
+        "url": "https://www.amazon.com/RELLECIGA-Bathing-Suit-Adjustable-Shoulder-Bandeau-One/dp/B08V5879SK/ref=sr_1_155",
+        "asin": "B08V5879SK"
+    },
+    {
+        "url": "https://www.amazon.com/KRLAGAPAS-Bathing-Control-Swimsuit-SW01Black/dp/B09NS67H1B/ref=sr_1_156",
+        "asin": "B09NS67H1B"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Control-Swimwear-Self-Tie/dp/B0CP9FKFQY/ref=sr_1_149",
+        "asin": "B0CP9FKFQY"
+    },
+    {
+        "url": "https://www.amazon.com/IBL-Swimsuits-Removable-Leopard-Printed/dp/B0CZ3XXCNX/ref=sr_1_150",
+        "asin": "B0CZ3XXCNX"
+    },
+    {
+        "url": "https://www.amazon.com/Leoparts-Womens-Retro-Swimsuits-Bathing/dp/B08R1N7PN2/ref=sr_1_151",
+        "asin": "B08R1N7PN2"
+    },
+    {
+        "url": "https://www.amazon.com/SPORLIKE-Swimsuit-Adjustable-Bathing-Swimwear/dp/B0CVX8BZXF/ref=sr_1_152",
+        "asin": "B0CVX8BZXF"
+    },
+    {
+        "url": "https://www.amazon.com/HAIVIDO-Swimsuits-Control-Bathing-Swimwear/dp/B0CFGWVGDM/ref=sr_1_153",
+        "asin": "B0CFGWVGDM"
+    },
+    {
+        "url": "https://www.amazon.com/Amazon-Essentials-One-Piece-Coverage-Available/dp/B0B9XMV2LC/ref=sr_1_154",
+        "asin": "B0B9XMV2LC"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Ruched-Swimsuit-Straps-Bathing/dp/B09QPKT82Z/ref=sr_1_159",
+        "asin": "B09QPKT82Z"
+    },
+    {
+        "url": "https://www.amazon.com/Charmo-Swimsuit-Bathing-Monokini-Swimwear/dp/B0CTQ9GGH3/ref=sr_1_160",
+        "asin": "B0CTQ9GGH3"
+    },
+    {
+        "url": "https://www.amazon.com/Narecte-Bathing-Control-Halter-Swimsuit/dp/B0CNY2W4LP/ref=sr_1_161",
+        "asin": "B0CNY2W4LP"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Bathing-Crisscross-Adjustable/dp/B0D8T29R8M/ref=sr_1_162",
+        "asin": "B0D8T29R8M"
+    },
+    {
+        "url": "https://www.amazon.com/Eomenie-Swimsuit-Shoulder-Slimming-Swimwear/dp/B0CQYJ67GL/ref=sr_1_167",
+        "asin": "B0CQYJ67GL"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Womens-Swimsuit-Bathing-Cheeky/dp/B0D9W6MT22/ref=sr_1_168",
+        "asin": "B0D9W6MT22"
+    },
+    {
+        "url": "https://www.amazon.com/Womens-Bathing-Suits-Leopard-Swimwear/dp/B089K5S4MG/ref=sr_1_169",
+        "asin": "B089K5S4MG"
+    },
+    {
+        "url": "https://www.amazon.com/SOCIALA-Adjustable-Swimsuits-Monokinis-Swimwear/dp/B0CQBYDZMV/ref=sr_1_170",
+        "asin": "B0CQBYDZMV"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuits-Bathing-Control-Mutiple/dp/B0CK1KHNRC/ref=sr_1_171",
+        "asin": "B0CK1KHNRC"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Bathing-Swimsuits-Adjustable-Crisscross/dp/B0C7H1X8WH/ref=sr_1_172",
+        "asin": "B0C7H1X8WH"
+    },
+    {
+        "url": "https://www.amazon.com/Eomenie-Control-Swimsuit-Slimming-Swimwear/dp/B0CQLV9F6V/ref=sr_1_173",
+        "asin": "B0CQLV9F6V"
+    },
+    {
+        "url": "https://www.amazon.com/AIMAGE-Control-Swimsuit-Adjustable-Spaghetti/dp/B0CQYCTP6N/ref=sr_1_174",
+        "asin": "B0CQYCTP6N"
+    },
+    {
+        "url": "https://www.amazon.com/Swimsuits-Slimming-Control-Swimwear-Moonlight/dp/B0D4MC63DW/ref=sr_1_175",
+        "asin": "B0D4MC63DW"
+    },
+    {
+        "url": "https://www.amazon.com/Halcurt-Swimsuit-Racerback-Conservative-Turquoise/dp/B0CY2FV44V/ref=sr_1_176",
+        "asin": "B0CY2FV44V"
+    },
+    {
+        "url": "https://www.amazon.com/Eomenie-Swimsuits-Control-Slimming-Swimwear/dp/B0CQVNB5JF/ref=sr_1_177",
+        "asin": "B0CQVNB5JF"
+    },
+    {
+        "url": "https://www.amazon.com/PERONA-Swimsuits-Control-Bathing-Swimwear/dp/B085T9VT6Q/ref=sr_1_178",
+        "asin": "B085T9VT6Q"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Spaghetti-Adjustable-Swimwear/dp/B0CXDS6N8P/ref=sr_1_179",
+        "asin": "B0CXDS6N8P"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Bathing-Adjustable-Swimwear/dp/B0CZQD8X2K/ref=sr_1_180",
+        "asin": "B0CZQD8X2K"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Bathing-Crisscross-Adjustable/dp/B0DB4Y2M9M/ref=sr_1_181",
+        "asin": "B0DB4Y2M9M"
+    },
+    {
+        "url": "https://www.amazon.com/AIMAGE-Control-Swimsuit-Vintage-Swimwear/dp/B0CKX6P72L/ref=sr_1_182",
+        "asin": "B0CKX6P72L"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Womens-Swimsuit-Bathing-Racerback/dp/B0D92HZLJ1/ref=sr_1_183",
+        "asin": "B0D92HZLJ1"
+    },
+    {
+        "url": "https://www.amazon.com/VIMPUNEC-Swimsuit-Control-Bathing-Swimwear/dp/B0CNQST4TQ/ref=sr_1_184",
+        "asin": "B0CNQST4TQ"
+    },
+    {
+        "url": "https://www.amazon.com/B2prity-Swimsuits-Control-Swimwear-Bathing/dp/B0777FLTMH/ref=sr_1_185",
+        "asin": "B0777FLTMH"
+    },
+    {
+        "url": "https://www.amazon.com/Dixperfect-Inspired-Swimwear-Bathing-Crinkle/dp/B0C1BFC83B/ref=sr_1_186",
+        "asin": "B0C1BFC83B"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Control-Material-Adjustable/dp/B0C1BRDRTY/ref=sr_1_187",
+        "asin": "B0C1BRDRTY"
+    },
+    {
+        "url": "https://www.amazon.com/SOCIALA-Swimsuit-Control-Swimwear-Monokini/dp/B0CLCX1WC3/ref=sr_1_188",
+        "asin": "B0CLCX1WC3"
+    },
+    {
+        "url": "https://www.amazon.com/Blooming-Jelly-Swimsuit-Shoulder-Drawstring/dp/B0CKWX2MPM/ref=sr_1_189",
+        "asin": "B0CKWX2MPM"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Adjustable-Textured-Bathing/dp/B0CWNVB64C/ref=sr_1_190",
+        "asin": "B0CWNVB64C"
+    },
+    {
+        "url": "https://www.amazon.com/AIMAGE-Swimsuit-Control-Swimwear-XX-Large/dp/B0CMXHWCQ7/ref=sr_1_191",
+        "asin": "B0CMXHWCQ7"
+    },
+    {
+        "url": "https://www.amazon.com/Swimsuit-Slimming-Bathing-Control-Adjustable/dp/B0CMX81TYH/ref=sr_1_192",
+        "asin": "B0CMX81TYH"
+    },
+    {
+        "url": "https://www.amazon.com/Calvin-Klein-Standard-Racerback-Removable/dp/B0BTCNYH1M/ref=sr_1_193",
+        "asin": "B0BTCNYH1M"
+    },
+    {
+        "url": "https://www.amazon.com/RELLECIGA-Swimsuit-Adjustable-Shoulder-Bathing/dp/B0CLQTLN31/ref=sr_1_194",
+        "asin": "B0CLQTLN31"
+    },
+    {
+        "url": "https://www.amazon.com/Eomenie-Swimsuits-Sleeves-Control-Swimwear/dp/B0CQP21WZ7/ref=sr_1_195",
+        "asin": "B0CQP21WZ7"
+    },
+    {
+        "url": "https://www.amazon.com/COCOPEAR-Swimsuit-Swimwear-Slimming-Burgundy/dp/B0B9X35JY1/ref=sr_1_196",
+        "asin": "B0B9X35JY1"
+    },
+    {
+        "url": "https://www.amazon.com/Viottiset-Swimsuit-Bathing-Swimsuits-Monokini/dp/B0CSJWB3K8/ref=sr_1_197",
+        "asin": "B0CSJWB3K8"
+    },
+    {
+        "url": "https://www.amazon.com/LAPHEE-ROSE-Swimsuits-Slimming-Swimwear/dp/B0CSF4N3QK/ref=sr_1_198",
+        "asin": "B0CSF4N3QK"
+    },
+    {
+        "url": "https://www.amazon.com/Aleumdr-Vintage-Swimsuit-Bathing-Monokini/dp/B0C5J6Z9V4/ref=sr_1_199",
+        "asin": "B0C5J6Z9V4"
+    },
+    {
+        "url": "https://www.amazon.com/Soyea-Swimsuits-Bathing-Slimming-Swimwear/dp/B0C6KDGS4B/ref=sr_1_200",
+        "asin": "B0C6KDGS4B"
+    },
+    {
+        "url": "https://www.amazon.com/RELLECIGA-Bathing-Suit-Adjustable-Shoulder-Bandeau-One/dp/B08V4PNRXP/ref=sr_1_201",
+        "asin": "B08V4PNRXP"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Bathing-Adjustable-Vintage/dp/B09YTRY1P5/ref=sr_1_202",
+        "asin": "B09YTRY1P5"
+    },
+    {
+        "url": "https://www.amazon.com/Swimsuit-Control-Adjustable-Slimming-Swimwear/dp/B0CTQ3C7SP/ref=sr_1_203",
+        "asin": "B0CTQ3C7SP"
+    },
+    {
+        "url": "https://www.amazon.com/KI-LAPHEE-Swimsuit-Swimwear-Balck-XL/dp/B0CRZ27W76/ref=sr_1_204",
+        "asin": "B0CRZ27W76"
+    },
+    {
+        "url": "https://www.amazon.com/Soyea-Swimsuits-Bathing-Slimming-Swimwear/dp/B0C6KDGS4B/ref=sr_1_197",
+        "asin": "B0C6KDGS4B"
+    },
+    {
+        "url": "https://www.amazon.com/RELLECIGA-Swimsuit-Adjustable-Shoulder-Bathing/dp/B0CLQTLN31/ref=sr_1_198",
+        "asin": "B0CLQTLN31"
+    },
+    {
+        "url": "https://www.amazon.com/Viottiset-Swimsuit-Bathing-Swimsuits-Monokini/dp/B0CSJWB3K8/ref=sr_1_199",
+        "asin": "B0CSJWB3K8"
+    },
+    {
+        "url": "https://www.amazon.com/Smart-Sexy-Swimsuit-Americana-Stripes/dp/B07MZQLD2V/ref=sr_1_200",
+        "asin": "B07MZQLD2V"
+    },
+    {
+        "url": "https://www.amazon.com/speerise-Swimsuit-Backless-Athletic-Adjustable/dp/B0C7G7DB3W/ref=sr_1_201",
+        "asin": "B0C7G7DB3W"
+    },
+    {
+        "url": "https://www.amazon.com/RELLECIGA-Womens-Neckline-Swimsuit-Bathing/dp/B0CL6K8Z9Z/ref=sr_1_202",
+        "asin": "B0CL6K8Z9Z"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Bathing-Adjustable-Vintage/dp/B09YTRY1P5/ref=sr_1_207",
+        "asin": "B09YTRY1P5"
+    },
+    {
+        "url": "https://www.amazon.com/LAPHEE-ROSE-Swimsuits-Slimming-Swimwear/dp/B0CSF4N3QK/ref=sr_1_208",
+        "asin": "B0CSF4N3QK"
+    },
+    {
+        "url": "https://www.amazon.com/Aleumdr-Vintage-Swimsuit-Bathing-Monokini/dp/B0C5J6Z9V4/ref=sr_1_209",
+        "asin": "B0C5J6Z9V4"
+    },
+    {
+        "url": "https://www.amazon.com/Sovoyontee-Womens-Control-Swimwear-Swimsuit/dp/B088WTHGY7/ref=sr_1_210",
+        "asin": "B088WTHGY7"
+    },
+    {
+        "url": "https://www.amazon.com/LAPHEE-ROSE-Swimsuit-Bathing-Neckline/dp/B0CHJJDB44/ref=sr_1_215",
+        "asin": "B0CHJJDB44"
+    },
+    {
+        "url": "https://www.amazon.com/Calvin-Klein-Crossover-Blouson-One-Piece/dp/B09Q13NH57/ref=sr_1_216",
+        "asin": "B09Q13NH57"
+    },
+    {
+        "url": "https://www.amazon.com/Amazon-Essentials-Womens-Swimsuit-XX-Large/dp/B0B9SL2S64/ref=sr_1_217",
+        "asin": "B0B9SL2S64"
+    },
+    {
+        "url": "https://www.amazon.com/Swimsuit-Control-Adjustable-Slimming-Swimwear/dp/B0CTQ3C7SP/ref=sr_1_218",
+        "asin": "B0CTQ3C7SP"
+    },
+    {
+        "url": "https://www.amazon.com/Upopby-Swimsuit-Slimming-Swimwear-Beachwear/dp/B08NCSF92F/ref=sr_1_219",
+        "asin": "B08NCSF92F"
+    },
+    {
+        "url": "https://www.amazon.com/Binlowis-Ruffle-Swimsuit-Bathing-Swimwear/dp/B09MJXXSWJ/ref=sr_1_220",
+        "asin": "B09MJXXSWJ"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Ruffled-Adjustable-Swimwear/dp/B0C7L1LBZZ/ref=sr_1_221",
+        "asin": "B0C7L1LBZZ"
+    },
+    {
+        "url": "https://www.amazon.com/SHEKINI-Brazilian-Swimsuits-X-Large-Manhattan/dp/B07BFBSDBR/ref=sr_1_222",
+        "asin": "B07BFBSDBR"
+    },
+    {
+        "url": "https://www.amazon.com/Upopby-Swimsuit-Slimming-Coverage-Swimwear/dp/B0CBBPSR43/ref=sr_1_223",
+        "asin": "B0CBBPSR43"
+    },
+    {
+        "url": "https://www.amazon.com/AXESEA-Swimsuit-Sleeveless-Printed-Surfing/dp/B07PN1XYDY/ref=sr_1_224",
+        "asin": "B07PN1XYDY"
+    },
+    {
+        "url": "https://www.amazon.com/SHEKINI-Colorful-Swimsuit-Backless-Bathing/dp/B08JHNDHNN/ref=sr_1_225",
+        "asin": "B08JHNDHNN"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Womens-Swimsuit-Bathing-Zipper/dp/B0DGG5SGN7/ref=sr_1_226",
+        "asin": "B0DGG5SGN7"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Womens-Piece-Swimsuit-Black/dp/B0D1VHN2SC/ref=sr_1_227",
+        "asin": "B0D1VHN2SC"
+    },
+    {
+        "url": "https://www.amazon.com/Hilinker-Shoulder-Bathing-Swimsuit-X-Large/dp/B0CRQLZ7FP/ref=sr_1_228",
+        "asin": "B0CRQLZ7FP"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Swimsuit-Adjustable-Straps-Ruffle/dp/B0DP27VQWS/ref=sr_1_229",
+        "asin": "B0DP27VQWS"
+    },
+    {
+        "url": "https://www.amazon.com/Septangle-Swimsuit-Slimming-Swimwear-Monokini/dp/B0BQBZGYZ5/ref=sr_1_230",
+        "asin": "B0BQBZGYZ5"
+    },
+    {
+        "url": "https://www.amazon.com/CUPSHE-Womens-Swimsuit-Adjustable-Straps/dp/B0CYQ23LHV/ref=sr_1_231",
+        "asin": "B0CYQ23LHV"
+    },
+    {
+        "url": "https://www.amazon.com/Swimsuits-Control-Bathing-Slimming-Swimsuit/dp/B0D3WL7ZM3/ref=sr_1_232",
+        "asin": "B0D3WL7ZM3"
+    }
+]
