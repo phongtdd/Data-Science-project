@@ -1,4 +1,4 @@
 Best Parameters: {'max_depth': 20, 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 200}
-RMAE: 0.049687704636440344
+MAE: 0.049687704636440344
 RMSE: 5.97623606551388
 R²: 0.8100494927557063
