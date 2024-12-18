@@ -8,3 +8,4 @@ json
 asyncio
 re
 urllib
+streamlit
