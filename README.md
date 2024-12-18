@@ -5,11 +5,7 @@ Mini-project for course of Intro to Data Science, with the aim of developing a a
 
 For examination purposes, you can check the source code of the project. The repository is organized as follows:  
 
-<<<<<<< HEAD
-### 1. **Model**  
-=======
 ### 1. model
->>>>>>> f46ce65ff4d31cc4cf71bfc25f76e93df3c845ce
 - This folder contains all the code required to train our model, which is used for predicting the price of clothes.  
 - Additionally, it includes the pre-trained model path, allowing the model to be run without retraining.  
 
@@ -22,8 +18,7 @@ For examination purposes, you can check the source code of the project. The repo
 ### 4. final_data
 - This folder stores the raw data for each category collected during the crawling process.  
 
-<<<<<<< HEAD
-### 5. **Crawl**  
+### 5. **crawl**  
 This folder contains all the scripts for extracting product data from the Amazon website. The included files serve specific purposes in the data crawling pipeline as outlined below:  
 1. **`search.py`**: Allows users to define a category of interest (e.g., "t-shirt", "dress") and perform a search query. The script outputs product information into a JSON file located at `data/amazon_unique_<your_query>.json`.  
 2. **`extract_asin.py`**: Extracts the Amazon Standard Identification Number (ASIN) codes from the JSON file generated in the previous step.  
@@ -31,31 +26,16 @@ This folder contains all the scripts for extracting product data from the Amazon
 4. **`filter_data.py`**: Applies filters to ensure that the size attributes of the variant products fall within a predefined range: [Small, Medium, Large, X-Large, XX-Large].  
 5. **`scrapes.py`**: Extracts comprehensive information about a product identified by its ASIN code.  
 
-### 6. **Data**  
+### 6. **data**  
 This folder stores all the raw data obtained during the data crawling process.
-
-=======
-### 5. crawl  
-- *[Details to be added]*  
-
-### 6. data
-- *[Details to be added]*  
->>>>>>> f46ce65ff4d31cc4cf71bfc25f76e93df3c845ce
 
 ### 7. EDA notebook 
 - This notebook contains the code for visualizing and analyzing the data during the exploratory data analysis phase.  
 
-<<<<<<< HEAD
-### 8. **Preprocess_initial_data notebook**  
-- This notebook focuses on normalizing the raw data and preprocessing it for training and visualization.  
-
-### 9. **Final_data.json and preprocess_data.json**  
-=======
 ### 8. preprocess_initial_data notebook
 - This notebook focuses on normalizing the raw data and preprocessing it for training and visualization.  
 
 ### 9. final_data.json and preprocess_data.json
->>>>>>> f46ce65ff4d31cc4cf71bfc25f76e93df3c845ce
 - These files represent the processed data:
   - `final_data.json`: Data after preprocessing.
   - `preprocess_data.json`: Data prepared for model training.  
