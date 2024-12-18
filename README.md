@@ -1,5 +1,5 @@
 # Data Science Project
-Mini-project for course of Intro to Data Science, with the aim of developing a application that 
+Mini-project for course of Intro to Data Science, with the aim of developing a application that predictr the price of clothes.
 
 # Project Source Code  
 
